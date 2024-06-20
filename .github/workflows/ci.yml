@@ -21,19 +21,19 @@ jobs:
         run: cd python && pytest --cov app ${{ env.CODECOV_ATS_TESTS }}
 
       - name: npm install -g codecov
-        run: npm install -g codecov
+        run: npm install -g codecov && npm install -g pnpm
 
       - name: npm install
-        run: cd node && npm install
+        run: cd node && pnpm install
 
       - name: test node
-        run: cd node && npm run unit
+        run: cd node && pnpm run unit
 
       - name: bundle install
-        run: cd node && npm install @codecov/webpack-plugin --save-dev
+        run: cd node && pnpm add @codecov/webpack-plugin 
 
       - name: build
-        run: cd node && npm run build
+        run: cd node && pnpm run build
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
