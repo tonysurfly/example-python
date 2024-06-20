@@ -30,7 +30,7 @@ jobs:
         run: cd node && npm run unit
 
       - name: build
-        run: cd node && npm run build --report
+        run: cd node && npm run build
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
