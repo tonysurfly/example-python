@@ -24,10 +24,13 @@ jobs:
         run: npm install -g codecov
 
       - name: npm install
-        run: npm install
+        run: cd node && npm install
 
       - name: test node
         run: cd node && npm run unit
+
+      - name: build
+        run: cd node && npm run build --report
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
