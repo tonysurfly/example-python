@@ -29,6 +29,9 @@ jobs:
       - name: test node
         run: cd node && npm run unit
 
+      - name: bundle install
+        run: cd node && npm install @codecov/webpack-plugin --save-dev
+
       - name: build
         run: cd node && npm run build
 

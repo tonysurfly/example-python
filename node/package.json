@@ -17,6 +17,7 @@
     "vue-router": "^2.6.0"
   },
   "devDependencies": {
+    "@codecov/webpack-plugin": "0.0.1-beta.10",
     "@vue/test-utils": "^1.0.0-beta.24",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
