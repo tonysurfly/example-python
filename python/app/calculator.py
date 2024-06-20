@@ -13,17 +13,6 @@ class Calculator:
             return "Cannot divide by 0"
         return x * 1.0 / y
 
-    def power(x, y):
-        return x**y
-
-    def root(x, y):
-        return x ** (1.0 / y)
-
-    def factorial(x):
-        if x == 0:
-            return 1
-        return x * Calculator.factorial(x - 1)
-
     def calculate_sum(n):
         # Code complexity
         result = 0
