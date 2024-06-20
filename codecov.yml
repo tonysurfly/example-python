@@ -5,14 +5,15 @@ coverage:
         target: 80%    # the required coverage value
         threshold: 1%  # the leniency in hitting the target
 
-flag_management:
-  individual_flags:
-    - name: smart-tests
-      carryforward: true
-      carryforward_mode: "labels"
-      statuses:
-        - type: "project"
-        - type: "patch"
+flags:
+  front-end:
+    paths: #note, accepts globs, not regexes
+      - node
+    carryforward: false
+  back-end:
+    paths: #note, accepts globs, not regexes
+      - python
+    carryforward: true
 
 cli:
   plugins:
