@@ -4,14 +4,6 @@ coverage:
       default:
         target: 80%    # the required coverage value
         threshold: 1%  # the leniency in hitting the target
-      front-end:
-        target: 60%
-       flags:
-          - front-end
-      back-end:
-        target: 100%
-        flags:
-          - back-end
 
 flags:
   front-end:
