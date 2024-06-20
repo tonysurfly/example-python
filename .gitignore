@@ -1,2 +1,3 @@
 __pycache__/
 node/coverage/
+node/test/specs/__snapshots__/
