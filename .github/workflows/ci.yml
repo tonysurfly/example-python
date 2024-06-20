@@ -39,5 +39,16 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           verbose: true
+          files: python/coverage.json
+          flags: python
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          verbose: true
+          files: node/coverage/coverage-final.json
+          flags: node
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

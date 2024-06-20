@@ -6,11 +6,11 @@ coverage:
         threshold: 1%  # the leniency in hitting the target
 
 flags:
-  front-end:
+  node:
     paths: #note, accepts globs, not regexes
       - node
     carryforward: false
-  back-end:
+  python:
     paths: #note, accepts globs, not regexes
       - python
     carryforward: true
